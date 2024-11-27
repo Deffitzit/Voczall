@@ -1,0 +1,137 @@
+@import 'defolt_variables.scss';
+@import 'header_and_footer.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.text {
+    margin: 30px;
+    height: 100%;
+}
+
+.orange_lamp {
+    stroke: #2a375c;
+}
+
+.yellow_lamp {
+    stroke: #86A4FC;
+}
+
+.left_auto {
+    position: absolute;
+    right: 110%;
+    top: 35%;
+    height: 60%;
+    z-index: 1;
+    transition: all 1s ease-out;
+    filter: blur(30px);
+}
+
+.right_auto {
+    position: absolute;
+    left: 110%;
+    top: 35%;
+    height: 60%;
+    z-index: 1;
+    transition: all 1s ease-out;
+    filter: blur(30px);
+}
+
+.ThirdFloor {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto;
+    background-color: #3939c0;
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+.inThirdFloor {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+}
+
+.FirstFloor {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: auto;
+    background-color: #3939c0;
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+.driver {
+    position: absolute;
+    left: 110%;
+    top: 35%;
+    height: 60%;
+    z-index: 1;
+    filter: blur(30px);
+    transition: all 1.5s ease-out;
+}
+
+.inThirdFloor:hover ~ .driver {
+    left: 70%;
+    filter: blur(0px);
+    height: 110%;
+    top: 5%;
+}
+
+.inThirdFloor:hover ~ .left_auto {
+    right: 85%;
+    filter: blur(0px);
+    height: 200%;
+    top: 5%;
+}
+
+.inThirdFloor:hover ~ .right_auto {
+    left: 85%;
+    filter: blur(0px);
+    height: 200%;
+    top: 5%;
+}
+
+.inThirdFloor:hover ~ .orange_lamp {
+    stroke: #f87f1d;
+}
+
+.inThirdFloor:hover ~ .yellow_lamp {
+    stroke: #ffda34;
+}   
+
+
+h1, h2, h3, h4 {
+    @include defolt_bold_text;
+}
+
+h5 {
+    margin-bottom: 20px;
+    font: 1.4vw $mainfont;
+    font-weight: bold;
+    color: white;
+    z-index: 999;
+}
+
+p {
+    font: 1vw $mainfont;
+    font-weight: bold;
+    color: rgb(158, 158, 158);
+    z-index: 999;
+}
+
+.maintext {
+    margin: 20px 0;
+    font: 1.1vw $mainfont;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    z-index: 999;
+}
+

@@ -1,0 +1,341 @@
+$darkblue: #4a69c6;
+$mainfont:'Open Sans', sans-serif;
+
+$breakpoint_xxl: 1920px;
+$breakpoint_xl: 1024px;
+$breakpoint_md: 767px;
+$breakpoint_sm: 320px;
+
+@mixin defolt_bold_text {
+    font: 1.4vw $mainfont;
+    font-weight: bold;
+    color: white;
+    z-index: 999;
+}
+
+@mixin comp_header {
+    header {
+        background: #ffffff;
+        width: 100%;
+        top: 0;
+        height: auto;
+        display: flex;
+        position:  sticky;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 999;
+    }
+
+    .lOgo {
+        width: 10.5vw;
+        padding: 0 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@mixin phone_header {
+    header {
+        background: #ffffff;
+        width: 100%;
+        top: 0;
+        height: auto;
+        display: flex;
+        position:  sticky;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 999;
+    }
+
+    .lOgo {
+        width: 20.5vw;
+        padding: 20px 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@mixin hor_nav {
+
+    nav {
+        position:  sticky;
+        background-color: #2e2b93;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        background: #ffffff;
+        color:#000000;
+        font-size: 1vw;
+        text-decoration: none;
+        border: 0;
+        cursor: pointer;
+        position: relative;
+        transition-delay: 0.3s;
+        overflow: hidden;
+    }
+    
+    .btn:hover {
+        transition: all 0.3s;
+        color:#ffffff;
+    }
+    
+    .btn::after {
+        color:#ffffff;
+        content: '';
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        bottom: -150px;
+        border-radius: 0%;
+        background: #4a69c6;
+        transition: all 0.3s ease;
+        z-index: 10;
+        transition-delay: 0.2s;
+    }
+    
+    .btn::before {
+        color:#ffffff;
+        content: '';
+        position: absolute;
+        display: block;
+        height: 0;
+        width: 80%;
+        top: -140px;
+        border-radius: 0%;
+        background: #2e2b93;
+        transition: all 0.3s ease;
+        z-index: 11;
+        transition-delay: 0s;
+    }
+    
+    .btn:hover::after {
+        height: 300px;
+        width: 100%;
+        transition-delay: 0s;
+    }
+    
+    .btn:hover::before {
+        height: 200px;
+        width: 80%;
+        transition-delay: 0.1s;
+    }
+
+    .btnb {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background: #ffffff;
+        color:#000000;
+        font-size: 20px;
+        text-decoration: none;
+        border: 0;
+        cursor: pointer;
+        position: relative;
+        transition-delay: 0.3s;
+        overflow: hidden;
+    
+    } 
+
+    .btnb:hover {
+        transition: all 0.3s;
+        color:#ffffff;
+    }
+
+    .btnb::after {
+        color:#ffffff;
+        content: '';
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        bottom: -150px;
+        border-radius: 0%;
+        background: #4a69c6;
+        transition: all 0.3s ease;
+        z-index: 10;
+        transition-delay: 0.2s;
+    }
+
+    .btnb::before {
+        color:#ffffff;
+        content: '';
+        position: absolute;
+        display: block;
+        height: 0;
+        width: 80%;
+        top: -140px;
+        border-radius: 0%;
+        background: #2e2b93;
+        transition: all 0.3s ease;
+        z-index: 11;
+        transition-delay: 0s;
+    }
+    
+    .btnb:hover::after {
+        height: 300px;
+        width: 100%;
+        transition-delay: 0s;
+    }
+    
+    .btnb:hover::before {
+        height: 200px;
+        width: 80%;
+        transition-delay: 0.1s;
+    }
+}
+
+@mixin vert_nav {
+
+    .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background: #ffffff;
+        color:#000000;
+        font-size: 20px;
+        text-decoration: none;
+        border: 0;
+        cursor: pointer;
+        position: relative;
+        transition-delay: 0.3s;
+        overflow: hidden;
+    }
+    
+    .btn:hover {
+        transition: all 0.3s;
+        color:#ffffff;
+    }
+    
+    .btn::after {
+        color:#ffffff;
+        content: '';
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 10%;
+        bottom: -100%;
+        right: -10%;
+        border-radius: 0%;
+        background: #4a69c6;
+        transition: all 0.3s ease;
+        z-index: 10;
+        transition-delay: 0.2s;
+    }
+    
+    .btn::before {
+        color:#ffffff;
+        content: '';
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 10%;
+        top: -100%;
+        left: -120px;
+        border-radius: 0%;
+        background: #2e2b93;
+        transition: all 0.3s ease;
+        z-index: 11;
+        transition-delay: 0s;
+    }
+    
+    .btn:hover::after {
+        height: 300px;
+        width: 100%;
+        transition-delay: 0s;
+    }
+    
+    .btn:hover::before {
+        height: 200px;
+        width: 80%;
+        transition-delay: 0.1s;
+    }
+    
+    .btn b {
+        font-size: 1.8vw;
+        font-family: $mainfont;
+        margin: 10px 30px;
+        position: relative;
+        z-index: 12;
+    }
+    
+    .btnb {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background: #ffffff;
+        color:#000000;
+        font-size: 20px;
+        text-decoration: none;
+        border: 0;
+        cursor: pointer;
+        position: relative;
+        transition-delay: 0.3s;
+        overflow: hidden;
+    
+    }
+    
+    .btnb:hover {
+        transition: all 0.3s;
+        color:#ffffff;
+    }
+    
+    .btnb::after {
+        color:#ffffff;
+        content: '';
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        bottom: -150px;
+        border-radius: 0%;
+        background: #4a69c6;
+        transition: all 0.3s ease;
+        z-index: 10;
+        transition-delay: 0.2s;
+    }
+    
+    .btnb::before {
+        color:#ffffff;
+        content: '';
+        position: absolute;
+        display: block;
+        height: 0;
+        width: 80%;
+        top: -140px;
+        border-radius: 0%;
+        background: #2e2b93;
+        transition: all 0.3s ease;
+        z-index: 11;
+        transition-delay: 0s;
+    }
+    
+    .btnb:hover::after {
+        height: 300px;
+        width: 100%;
+        transition-delay: 0s;
+    }
+    
+    .btnb:hover::before {
+        height: 200px;
+        width: 80%;
+        transition-delay: 0.1s;
+    }
+}
+
